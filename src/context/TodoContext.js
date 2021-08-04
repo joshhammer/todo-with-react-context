@@ -15,10 +15,29 @@ function TodoContextProvider(props) {
       id: createRandomId(),
       completed: false
     }
-
     setTodos(prevTodos => {
       return [...prevTodos, newTodo]
     })
+  }
+
+  const deleteTodo = (id) => {
+    const filteredTodos = todos.filter(todo => todo.id !== id)
+    setTodos([...filteredTodos])
+  }
+
+  const toggleCompleted = (id) => {
+    const updatedTodos = todos.map(todo => {
+      if(todo.id === id) {
+        return {
+          ...todo,
+          completed: !todo.completed
+        }
+      } 
+      else {
+        return todo
+      }
+    })
+    setTodos([...updatedTodos])
   }
 
   useEffect(() => {
@@ -30,7 +49,9 @@ function TodoContextProvider(props) {
   return (
     <TodoContext.Provider value={{
       todos,
-      addNewTodo
+      addNewTodo,
+      toggleCompleted,
+      deleteTodo
     }}>
       {props.children}
     </TodoContext.Provider>

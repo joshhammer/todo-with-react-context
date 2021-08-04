@@ -3,6 +3,9 @@ import {TodoContext} from "../../context/TodoContext"
 
 import TodoItem from "../TodoItem/TodoItem"
 
+import "./TodoApp.scss"
+
+
 export default function TodoApp() {
 const {todos, addNewTodo} = useContext(TodoContext)
 
@@ -25,9 +28,9 @@ const handleSubmit = (event) => {
 
   return (
     <main className="main-app-container">
-      <h1>My Todo App</h1>
+      <h1 className="app-title">To Do..</h1>
       <div>
-        <form action="" onSubmit={handleSubmit}>
+        <form className="input-form" action="" onSubmit={handleSubmit}>
           <input 
             type="text" 
             placeholder="Enter new Todo here"

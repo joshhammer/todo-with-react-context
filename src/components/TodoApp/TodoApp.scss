@@ -1,0 +1,27 @@
+.main-app-container {
+  min-width: 500px;
+  max-width: 30%;
+  padding: 55px;
+  background-color: mediumpurple;
+
+  .app-title {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 0 2.5rem 0; 
+  }
+
+  .input-form {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    font-size: 2rem;
+    padding: 5px 10px;
+    &::placeholder {
+      font-family: var(--main-font);
+      color: rgb(255, 145, 102);
+    }
+  }
+}

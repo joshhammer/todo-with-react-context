@@ -1,6 +1,17 @@
+:root {
+  --main-font: 'Caveat', cursive;;
+  --main-green: rgb(84, 218, 144);
+  --main-red: #ff6497;
+  --main-box-shadow: 2px 2px 0px black;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
 }
 
 

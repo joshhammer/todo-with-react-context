@@ -33,12 +33,11 @@ const handleSubmit = (event) => {
         <form className="input-form" action="" onSubmit={handleSubmit}>
           <input 
             type="text" 
-            placeholder="Enter new Todo here"
             value={newTodoTitle}
             name="newtodo"
             onChange={handleChange}
           />
-          <button type="submit" >Add new Todo</button>
+          <button type="submit" >Add</button>
         </form>
         {allTodos}
       </div>

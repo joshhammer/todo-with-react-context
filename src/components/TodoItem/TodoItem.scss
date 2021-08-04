@@ -4,9 +4,9 @@
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgba(black, .45);
   box-shadow: 0px 0px 0px black;
-  transition: box-shadow .2s ease-out;
+  transition: box-shadow .15s ease-out;
   &:hover {
     
     box-shadow: 4px 5px 0px black;
@@ -17,20 +17,25 @@
     font-weight: 100;
     line-height: 1;
     margin-right: 20px;
+    text-shadow: 2px 2px 5px rgba(black, 0.5);
 
     &.completed {
       color: var(--main-green);
-      // text-decoration: line-through;
+      text-decoration: line-through;
     }
     &.incomplete {
       color: var(--main-red);
     }
   }
 
+  .todo-icon-box {
+    display: flex;
+  }
+
   .x-icon, .check-icon {
     padding: 2px;
-    height: 18px;
-    width: 18px;
+    height: 23px;
+    width: 23px;
     border: 1px solid black;
     margin-left: 10px;
     background-color: white;

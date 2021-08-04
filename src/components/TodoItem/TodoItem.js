@@ -10,7 +10,7 @@ export default function TodoItem(props) {
   return (
     <div className={"todo-item"}>
       <h2 className={props.todo.completed ? "completed" : 'incomplete'} >{props.todo.title}</h2>
-      <div>
+      <div className="todo-icon-box">
         <XMark className="x-icon" onClick={() => deleteTodo(props.todo.id)}/>
         <Check 
           className={`check-icon ${props.todo.completed ? "completed" : 'incomplete'}`} 

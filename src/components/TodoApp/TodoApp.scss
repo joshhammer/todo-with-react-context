@@ -2,7 +2,12 @@
   min-width: 500px;
   max-width: 30%;
   padding: 55px;
+  border-radius: 10px;
   background-color: mediumpurple;
+  box-shadow: 4px 4px 0px var(--main-green),
+              8px 8px 0px var(--main-red),
+              12px 12px 10px rgba(black, 0.5),
+  ;
 
   .app-title {
     font-size: 4rem;
@@ -11,17 +16,43 @@
   }
 
   .input-form {
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     display: flex;
     justify-content: space-between;
   }
 
   input {
+    font-family: var(--main-font);
+    border: 2px solid black;
+    border-radius: 0;
+    width: 300px;
     font-size: 2rem;
     padding: 5px 10px;
+
     &::placeholder {
       font-family: var(--main-font);
-      color: rgb(255, 145, 102);
+      color: black;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    font-family: var(--main-font);
+    font-size: 2rem;
+    border-radius: 0;
+    border: 2px solid black;
+    padding: 5px 15px 5px 10px;
+    transition: all .2s ease-out;
+    background-color: white;
+
+    &:hover {
+      cursor: pointer;
+      background-color: black;
+      color: white;
     }
   }
 }

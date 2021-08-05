@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react"
+import React, {useContext, useState, useEffect} from "react"
 import {TodoContext} from "../../context/TodoContext"
 
 import TodoItem from "../TodoItem/TodoItem"
@@ -25,6 +25,10 @@ const handleSubmit = (event) => {
   addNewTodo(newTodoTitle)
   setNewTodoTitle("")
 }
+
+useEffect(() => {
+  
+}, [todos])
 
   return (
     <main className="main-app-container">

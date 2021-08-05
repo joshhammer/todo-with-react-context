@@ -32,7 +32,7 @@
     display: flex;
   }
 
-  .x-icon, .check-icon {
+  .x-icon, .check-icon, .arrow-up-icon, .arrow-down-icon {
     padding: 2px;
     height: 23px;
     width: 23px;
@@ -43,7 +43,7 @@
     transition: all .2s ease-out;
   }
 
-  .x-icon {
+  .x-icon, .arrow-up-icon, .arrow-down-icon {
     &:hover {
       cursor: pointer;
       border: 1px solid var(--main-red);

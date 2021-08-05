@@ -9,10 +9,10 @@ import "./TodoApp.scss"
 export default function TodoApp() {
 const {todos, addNewTodo} = useContext(TodoContext)
 
-
 const allTodos = todos.map(todo => {
   return <TodoItem key={todo.id} todo={todo}/>
 })
+
 const [newTodoTitle, setNewTodoTitle] = useState("")
 
 const handleChange = (event) => {
@@ -39,7 +39,9 @@ const handleSubmit = (event) => {
           />
           <button type="submit" >Add</button>
         </form>
-        {allTodos}
+        <div className="todo-elements-container">
+          {allTodos}
+        </div>
       </div>
     </main>
   )

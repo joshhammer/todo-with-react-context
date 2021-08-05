@@ -1,6 +1,7 @@
 .main-app-container {
+  margin: 0 auto;
   min-width: 500px;
-  max-width: 30%;
+  max-width: 25%;
   padding: 55px;
   border-radius: 10px;
   background-color: mediumpurple;
@@ -9,10 +10,16 @@
               12px 12px 10px rgba(black, 0.5),
   ;
 
+  .todo-elements-container {
+    max-height: 600px;
+    overflow: scroll;
+  }
+
   .app-title {
     font-size: 4rem;
     text-align: center;
     margin: 0 0 2.5rem 0; 
+    color: white;
   }
 
   .input-form {

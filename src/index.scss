@@ -3,6 +3,7 @@
   --main-green: rgb(84, 218, 144);
   --main-red: #ff6497;
   --main-box-shadow: 2px 2px 0px black;
+  --bg-blue: rgb(193, 255, 255);
 }
 
 * {
@@ -11,8 +12,19 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5, h6, p a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 

@@ -16,7 +16,7 @@ function TodoContextProvider(props) {
       completed: false
     }
     setTodos(prevTodos => {
-      return [...prevTodos, newTodo]
+      return [newTodo, ...prevTodos]
     })
   }
 

@@ -20,21 +20,14 @@ function TodoContextProvider(props) {
     })
   }
 
-  const moveUpTodo = (id) => {
+  const moveTodo = (id, direction) => {
     const element = todos.find(todo => todo.id === id)
-    console.log(element)
     const index = todos.indexOf(element)
-    console.log(index)
-    if(index > 0) {
+
+    if(direction === "up" && index > 0) {
       setTodos([...array_move(todos, index, index - 1)])
     }
-  }
-  const moveDownTodo = (id) => {
-    const element = todos.find(todo => todo.id === id)
-    console.log(element)
-    const index = todos.indexOf(element)
-    console.log(index)
-    if(index < todos.length - 1){
+    else if (direction === "down" && index < todos.length - 1) {
       setTodos([...array_move(todos, index, index + 1)])
     }
   }
@@ -68,14 +61,11 @@ function TodoContextProvider(props) {
     setTodos([...allTodos])
   }, [])
 
-  console.log(todos)
-
   return (
     <TodoContext.Provider value={{
       todos,
       addNewTodo,
-      moveUpTodo,
-      moveDownTodo,
+      moveTodo,
       toggleCompleted,
       deleteTodo
     }}>

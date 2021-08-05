@@ -7,7 +7,7 @@ import {ReactComponent as ArrowUp} from "../../icons/arrow-up.svg"
 import {ReactComponent as ArrowDown} from "../../icons/arrow-down.svg"
 
 export default function TodoItem(props) {
-  const { deleteTodo, toggleCompleted, moveUpTodo, moveDownTodo} = useContext(TodoContext)
+  const { deleteTodo, toggleCompleted, moveTodo} = useContext(TodoContext)
 
   return (
     <div className={"todo-item"}>
@@ -18,8 +18,8 @@ export default function TodoItem(props) {
           className={`check-icon ${props.todo.completed ? "completed" : 'incomplete'}`} 
           onClick={() => toggleCompleted(props.todo.id)}
         />
-        <ArrowUp className="arrow-up-icon" onClick={() => moveUpTodo(props.todo.id)}/>
-        <ArrowDown className="arrow-down-icon" onClick={() => moveDownTodo(props.todo.id)}/>
+        <ArrowUp className="arrow-up-icon" onClick={() => moveTodo(props.todo.id, "up")}/>
+        <ArrowDown className="arrow-down-icon" onClick={() => moveTodo(props.todo.id, "down")}/>
       </div>
     </div>
   )

@@ -2,18 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 10px;
   margin-bottom: 1rem;
   border: 1px solid rgba(black, .45);
   box-shadow: 0px 0px 0px black;
   transition: box-shadow .15s ease-out;
+
   &:hover {
-    
     box-shadow: 4px 5px 0px black;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 100;
     line-height: 1;
     margin-right: 20px;
@@ -43,7 +43,7 @@
     transition: all .2s ease-out;
   }
 
-  .x-icon, .arrow-up-icon, .arrow-down-icon {
+  .x-icon {
     &:hover {
       cursor: pointer;
       border: 1px solid var(--main-red);
@@ -57,6 +57,14 @@
       cursor: pointer;
       border: 1px solid var(--main-green);
       background-color: var(--main-green);
+      fill: white;
+    }
+  }
+
+  .arrow-up-icon, .arrow-down-icon {
+    &:hover {
+      cursor: pointer;
+      background-color: black;
       fill: white;
     }
   }

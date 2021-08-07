@@ -1,9 +1,12 @@
 :root {
-  --main-font: 'Caveat', cursive;;
+  --main-font: 'Caveat', cursive;
+  --main-bg-color: rgb(110, 134, 240);
+  --main-black: #2d2d2d;
+  --main-white: snow;
   --main-green: rgb(84, 218, 144);
-  --main-red: #ff6497;
+  --main-red: #ff7664;
   --main-box-shadow: 2px 2px 0px black;
-  --bg-blue: rgb(193, 255, 255);
+  --bg-blue: rgb(225, 255, 255);
 }
 
 * {

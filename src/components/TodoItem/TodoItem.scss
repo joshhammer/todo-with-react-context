@@ -3,13 +3,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 10px;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(black, .45);
-  box-shadow: 0px 0px 0px black;
+  margin-bottom: 0.25rem;
+  // border: 1px solid rgba(black, .45);
+  box-shadow: 0px 0px 0px var(--main-black);
   transition: box-shadow .15s ease-out;
 
   &:hover {
-    box-shadow: 4px 5px 0px black;
+    box-shadow: 2px 3px 5px var(--main-black);
   }
 
   h2 {
@@ -17,7 +17,7 @@
     font-weight: 100;
     line-height: 1;
     margin-right: 20px;
-    text-shadow: 2px 2px 5px rgba(black, 0.5);
+    text-shadow: 2px 2px 2px rgba(black, 0.3);
 
     &.completed {
       color: var(--main-green);
@@ -36,9 +36,9 @@
     padding: 2px;
     height: 23px;
     width: 23px;
-    border: 1px solid black;
+    border: 1px solid var(--main-black);
     margin-left: 10px;
-    background-color: white;
+    background-color: var(--main-white);
     box-shadow: var(--main-box-shadow);
     transition: all .2s ease-out;
   }
@@ -48,7 +48,7 @@
       cursor: pointer;
       border: 1px solid var(--main-red);
       background-color: var(--main-red);
-      fill: white;
+      fill: var(--main-white);
     }
   }
 
@@ -57,15 +57,15 @@
       cursor: pointer;
       border: 1px solid var(--main-green);
       background-color: var(--main-green);
-      fill: white;
+      fill: var(--main-white);
     }
   }
 
   .arrow-up-icon, .arrow-down-icon {
     &:hover {
       cursor: pointer;
-      background-color: black;
-      fill: white;
+      background-color: var(--main-black);
+      fill: var(--main-white);
     }
   }
 

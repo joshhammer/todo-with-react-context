@@ -4,7 +4,7 @@
   max-width: 25%;
   padding: 55px;
   border-radius: 10px;
-  background-color: rgb(132, 114, 236);
+  background-color: var(--main-bg-color);
   box-shadow: 4px 4px 0px var(--main-green),
               8px 8px 0px var(--main-red),
               12px 12px 10px rgba(black, 0.5),
@@ -17,10 +17,30 @@
   }
 
   .app-title {
+    position: relative;
     font-size: 4rem;
     text-align: center;
     margin: 0 0 2.5rem 0; 
-    color: white;
+    color: var(--main-white); 
+    align-self: center;
+
+    &::after {
+      content: '';
+      bottom: 0; 
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background-color: var(--main-white);
+      border-radius: 5px;
+      transform: rotate(-4deg);
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .input-form {
@@ -32,7 +52,7 @@
 
   input {
     font-family: var(--main-font);
-    border: 2px solid black;
+    border: 2px solid var(--main-black);
     border-radius: 0;
     width: 300px;
     font-size: 2rem;
@@ -40,7 +60,7 @@
 
     &::placeholder {
       font-family: var(--main-font);
-      color: black;
+      color: var(--main-black);
       opacity: 1;
     }
 
@@ -53,15 +73,38 @@
     font-family: var(--main-font);
     font-size: 2rem;
     border-radius: 0;
-    border: 2px solid black;
+    border: 2px solid var(--main-black);
     padding: 5px 15px 5px 10px;
     transition: all .2s ease-out;
-    background-color: white;
+    background-color: var(--main-white);
 
     &:hover {
       cursor: pointer;
-      background-color: black;
-      color: white;
+      background-color: var(--main-black);
+      color: var(--main-white);
+    }
+  }
+}
+
+// media queries
+
+@media screen and (max-width: 768px) {
+  .main-app-container {
+    min-width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    
+    .app-title-container {
+      height: 20%;
+    }
+
+    .app-content-container {
+      height: 80%;
+      overflow: hidden;
+    }
+
+    .todo-elemnts-container {
+      max-height: 100%;
     }
   }
 }

@@ -32,8 +32,10 @@ useEffect(() => {
 
   return (
     <main className="main-app-container">
-      <h1 className="app-title">To Do..</h1>
-      <div>
+      <div className="app-title-container">
+        <h1 className="app-title">To Do..</h1>
+      </div>
+      <div className="app-content-container">
         <form className="input-form" action="" onSubmit={handleSubmit}>
           <input 
             type="text" 
